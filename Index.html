@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Trading Simulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="dashboard-title">Crypto Trading Simulator</h1>
+            <div class="account-summary">
+                <div class="wallet-info">
+                    <span class="wallet-label">Wallet Balance:</span>
+                    <span id="balance">$2000.00</span>
+                </div>
+                <div class="profit-info">
+                    <span class="profit-label">Total P/L:</span>
+                    <span id="total-profit-loss">$0.00</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h3>Market Prices</h3>
+                <div id="crypto-prices" class="crypto-prices"></div>
+            </div>
+
+            <div class="dashboard-card">
+                <!-- Ensure open-trades container has an ID for event delegation -->
+                <div id="open-trades-container">
+                    <h3>Open Trades</h3>
+                    <div id="open-trades">
+                        <p>No open trades</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+             <div id="trade-history-container">
+                 <h3>Trade History</h3>
+                <div id="trade-history">
+                    <p>No trade history</p>
+                </div>
+             </div>
+        </div>
+
+        <div class="controls">
+            <button id="control-button">Start Simulation</button>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+        "./config.js": "./config.js",
+        "./state.js": "./state.js",
+        "./api.js": "./api.js",
+        "./indicators.js": "./indicators.js",
+        "./trades.js": "./trades.js",
+        "./ui.js": "./ui.js"
+      }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
